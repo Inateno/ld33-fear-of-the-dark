@@ -1,0 +1,54 @@
+- le loup devrait pouvoir bondir sur quelqu'un (ajouter un délai de 500ms avant transformation ou sinon moveTo très rapide en avant sur espace ?)
+
+- afficher son score courant
+- FX nuage de transformation du loup
+
+- LOGIN: drapeau des pays dans le select
+
+- SCORES: drapeau affiché
+
+- improve: si server crash et reload, cleaner tout les objets / characters / level etc
+- coder les portes et interrupteurs
+- coder la victoire (sortie du donjon ?)
+
+IDAY EN PLUSS
+
+------ OK ------
+- bouton toggle son
+- afficher un compteur mort monstre et mort humains global
+- problème de sync des lights
+- cri de mort
+- bruit d'attaque
+- ajouter image controls sur le login
+- ambiant light pour le loup
+- bougie qu'on allume / éteint
+- ajouter les collisions avec le décors
+- tchat
+- bug: une seule personne dans le highscore
+- bug: on peu pas taper quelqu'un qui bouge car les joueurs n'updatent leur pos auprès du serveur que quand un input change, donc si on court droit (même coincé contre un mur) le joueur est intouchable car les autres le voyent bien là mais le serveur a l'ancienne pos.
+  => ajouter une sync loop
+- bug: score se remet pas a 0 dans notre player
+- LOGIN: pouvoir taper son pseudo
+- SCORES: conserver le meilleur score par pseudo
+- SCORES: cartes associé au meilleur score du joueur
+- pouvoir rejouer (UI death)
+- coder la death
+- loader le level dans la fonction loadMap (Game.js en bas)
+- coder le respawn
+- si on joue un monstre, le "brouillard" est beaucoup plus léger (pour y voir clair partout)
+- coder les feedback des actions et morts au client (uniquement si dans le rayon de vision du joueur)
+- coder chaque action au server
+  - humain (tue quelqu'un ?)
+  - loup (tue quelqu'un ?)
+- coder chaque action au client
+  - humain (épée)
+  - loup (miamiam)
+  - petite fille (allume une bougie)
+- détection de la zone dans laquelle le joueur se trouve, si c'est un monstre le skin change dans l'obscurité
+- différencier en code le type de joueur, attention si c'est un monstre seul le joueur possésseur et les autres monstres le savent, la data ne doit pas être envoyé aux autres
+- lumière et obscurité à coder (déjà en effet graphique)
+- connexion (login)
+- disconnect
+- other join
+- sync des déplacements
+- loader les autres joueurs

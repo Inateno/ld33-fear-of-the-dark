@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Stress test</title>
+    <link href="css/1.style.css" rel="stylesheet" type="text/css" />
+    <link href="css/2.Nebula.css" rel="stylesheet" type="text/css" />
+    <link href="css/popup.css" rel="stylesheet" type="text/css" />
+    <link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+    <link href="css/ui.css" rel="stylesheet" type="text/css" />
+    
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="img/64x64.png" />
+    <link rel="icon" type="image/png" href="img/128x128.png" />
+    
+    <!-- apple web-app -->
+    <link rel="apple-touch-icon-precomposed" href="img/128x128.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-startup-image" href="img/128x128.png" />
+    
+  </head>
+    <body>
+      <div id="render" style="position:relative">
+        <div id="notifsContainer"></div>
+        
+        <div id="logo">
+          <img src="img/dom/logo.png" />
+        </div>
+        
+        <div id="tchat" style="
+            position      : absolute;
+            bottom        : 0;
+            left          : 20px;
+            width         : 30%;
+            max-width     : 400px;
+            height        : 150px;
+            background    : rgba(58, 58, 58, 0.431373);
+            border-radius : 10px 10px 0 0;
+            color         : #FFF9F9;
+            box-sizing    : border-box;
+            opacity       : 1;
+            display       : none;">
+          <div class="messages" style="overflow-y: scroll;
+            padding: 10px 10px;height:126px;">
+            <div>Welcome in Fear of the Dark</div>
+            <div>use /players to see players online</div>
+            <div>Try to avoid killing everyone, the goal is to kill monsters as human and humans as monster</div>
+            <div>Call a friend to play with you :) more we are, more fun</div>
+          </div>
+          <input type="text" style="box-sizing:border-box;width:100%;border:none;padding:4px;" maxlength="96" placeholder="Enter to write"/>
+        </div>
+          
+        <div id="game" style="display: none;">
+          <div id="card-container">
+            <img id="card" src="img/cards/human.png" />
+          </div>
+          <div id="objective">
+            You are being hunted by monsters, run away and save your life !
+          </div>
+          <div id="global-score" style="display:none;text-align: left;font-size: 140%;margin-top: 40px;margin-left: 15px;">
+            <u>Deaths:</u><br />
+            Humans: <span id="glob-humans">0</span>
+            <br />
+            Monsters: <span id="glob-monsters">0</span>
+          </div>
+        </div>
+        
+        <div id="login" class="small_window" style="display:none;">
+          <img src="img/dom/ctrls.png" id="helper" style="position: absolute;left: -95%;width: 90%;margin-top: 60px;" />
+          <input type="text" id="nickname" value="" placeholder="Guest">
+          <br>
+          <select id="country" style="display:none">
+            <!-- <option value="fr">France</option>
+            <option value="it">Italiano</option>
+            <option value="es">Spanish</option>
+            <option value="pt">Portuguese</option>
+            <option value="br">Bresilian</option>
+            <option value="us">USA</option>
+            <option value="uk">United Kingdom</option>
+            <option value="jp">Japan</option>
+            <option value="de">Deutsch</option>
+            <option value="pl">Polska</option>
+            <option value="ru">Russia</option> -->
+          </select>
+          <br>
+          <button id="btnPlay" class="big_button"></button>
+        </div>
+        
+        <div id="scores" style="display:none;">
+          <h4><u>Leader board:</u></h4>
+          <div id="score-list">
+          </div>
+        </div>
+        
+        <div id="end" class="small_window" style="display:none">
+          <h2>You died !</h2>
+          <h3>Score: <span id="endScore"></span></h3>
+          <p>Oh crap you die, you can replay and maybe play an other role, the only way to know it is to click it !</p>
+          <button id="btnReplay" class="big_button"></button>
+        </div>
+        
+        <div id="toggleAudio"></div>
+      </div>
+        
+      
+      <div id="notificationTemplate" style="display:none">
+        <div>
+          <span class="content"></span>
+          <div class="notifClose">X</div>
+        </div>
+      </div>
+      <script type="text/javascript" src="js/ext_libs/require.js" data-main="js/files"></script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "dreamirl_node",
+  "version": "1.0.0",
+  "author": "Dreamirl",
+  "main": "main",
+  "engines": {
+    "node": "0.10.24"
+  },
+  "scripts": {
+    "start": "main.js"
+  },
+  "dependencies": {
+    "colors": "0.6.2",
+    "cookie-parser": "^1",
+    "dot": "^1",
+    "errorhandler": "^1",
+    "express": "^4",
+    "express-session": "^1",
+    "morgan": "^1",
+    "multer": "0.1.4",
+    "requirejs": "^2",
+    "socket.io": "^1",
+    "winston": "^0.8.3"
+  }
+}
